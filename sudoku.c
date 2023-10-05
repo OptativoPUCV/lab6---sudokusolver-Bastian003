@@ -47,6 +47,13 @@ int is_valid(Node* n){
   int fila[9][10]={0};
   int  columna[9][10]={0};
   int submatiz[9][10]={0};
+  for (int i=0;i<9;i++){
+    for(int j=0;j<9;j++){
+      int dato=n->sudo[i][j];
+    }
+  }
+
+  
   return 1;
 }
 

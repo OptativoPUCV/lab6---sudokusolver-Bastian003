@@ -49,3 +49,23 @@ sudoku.c:47:7: error: unused variable ‘fila’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 53370e6
+Thu 05 Oct 2023 05:50:18 PM UTC: 
+ sudoku.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:52:11: error: unused variable ‘dato’ [-Werror=unused-variable]
+   52 |       int dato=n->sudo[i][j];
+      |           ^~~~
+sudoku.c:49:7: error: unused variable ‘submatiz’ [-Werror=unused-variable]
+   49 |   int submatiz[9][10]={0};
+      |       ^~~~~~~~
+sudoku.c:48:8: error: unused variable ‘columna’ [-Werror=unused-variable]
+   48 |   int  columna[9][10]={0};
+      |        ^~~~~~~
+sudoku.c:47:7: error: unused variable ‘fila’ [-Werror=unused-variable]
+   47 |   int fila[9][10]={0};
+      |       ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+cf6267c
