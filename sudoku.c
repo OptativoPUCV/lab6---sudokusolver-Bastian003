@@ -44,8 +44,10 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-
-    return 1;
+  int fila[9][10]={0};
+  int  columna[9][10]={0};
+  int submatiz[9][10]={0};
+  return 1;
 }
 
 
