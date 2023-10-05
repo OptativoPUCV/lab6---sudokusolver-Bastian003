@@ -50,7 +50,16 @@ int is_valid(Node* n){
   for (int i=0;i<9;i++){
     for(int j=0;j<9;j++){
       int dato=n->sudo[i][j];
+      if(fila[i][dato]==1){
+        return 0;
+      }
+      fila[i][dato]=1;
+      if(columna[j][dato]==1){
+        return 0;
+      }
+      columna[j][dato]=1;
     }
+    
   }
 
   
