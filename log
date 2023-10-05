@@ -80,3 +80,21 @@ sudoku.c:49:7: error: unused variable ‘submatiz’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 8b088e9
+Thu 05 Oct 2023 05:55:16 PM UTC: 
+ sudoku.c | 12 +++++++++++-
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:66:28: error: ‘j’ undeclared (first use in this function)
+   66 |     int verificar=3*(i/3)+(j/3);
+      |                            ^
+sudoku.c:66:28: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:67:29: error: ‘dato’ undeclared (first use in this function)
+   67 |     if(submatriz[verificar][dato]==1){
+      |                             ^~~~
+sudoku.c:49:7: error: variable ‘submatriz’ set but not used [-Werror=unused-but-set-variable]
+   49 |   int submatriz[9][10]={0};
+      |       ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+b6448d7
