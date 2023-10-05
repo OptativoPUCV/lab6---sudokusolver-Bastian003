@@ -61,13 +61,15 @@ int is_valid(Node* n){
         return 0;
       }
       columna[j][dato]=1;
+
+      int verificar=3*(i/3)+(j/3);
+      if(submatriz[verificar][dato]==1){
+        return 0;
+      }
+      submatriz[verificar][dato]=1;
     }
 
-    int verificar=3*(i/3)+(j/3);
-    if(submatriz[verificar][dato]==1){
-      return 0;
-    }
-    submatriz[verificar][dato]==1;
+    
     
     
   }
