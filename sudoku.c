@@ -46,7 +46,7 @@ void print_node(Node* n){
 int is_valid(Node* n){
   int fila[9][10]={0};
   int  columna[9][10]={0};
-  //int submatriz[9][10]={0};
+  int submatriz[9][10]={0};
   for (int i=0;i<9;i++){
     for(int j=0;j<9;j++){
       
@@ -67,13 +67,13 @@ int is_valid(Node* n){
         return 0;
       }
       columna[j][dato]=1;
-       /* 
+       
       int verificar=3*(i/3)+(j/3);
       if(submatriz[verificar][dato]==1){
         return 0;
       }
       submatriz[verificar][dato]=1;
-      */
+      
     }
 
     
