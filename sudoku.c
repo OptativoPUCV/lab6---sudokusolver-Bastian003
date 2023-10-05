@@ -62,7 +62,7 @@ List* get_adj_nodes(Node* n){
           adyacente->sudo[i][j]=aux;
           pushBack(list, adyacente);
         }
-      
+      return list;
       }
     }
   }
