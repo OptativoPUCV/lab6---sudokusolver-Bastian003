@@ -51,7 +51,13 @@ int is_valid(Node* n){
     for(int j=0;j<9;j++){
       
       int dato=n->sudo[i][j];
-      
+      if(dato<1){
+        return 0;
+      }
+
+      if(dato>9){
+        return 0;
+      }
       if(fila[i][dato]==1){
         
         return 0;
