@@ -54,49 +54,35 @@ int is_valid(Node* n){
     for (int j=0;j<9;j++) {
       int dato=n->sudo[i][j];
 
-      if (dato !=0) {
-
-        if (fila[dato]==0) {
-
-          
-          fila[dato]=1;
-          
-        } else {
-          return 0;
-        }
+      if(fila[dato]==0){
+        fila[dato]=1;
+      }else{
+        return 0; 
       }
 
       int dato_columna=n->sudo[j][i];
 
-      if (dato_columna !=0) {
-        
-        if (columna[dato_columna]==0) {
-          columna[dato_columna]=1;
-
-          
-        } else {
-          return 0; 
-        }
-        
+      
+      if(columna[dato_columna]==0) {
+        columna[dato_columna]=1;
+      }else{
+        return 0; 
       }
+
+      
 
       int submatriz_1=3*(i/3)+(j/3);
       int submatriz_2=3*(i%3)+(j%3);
 
       
-      int submatriz_dato = n->sudo[submatriz_2 ][submatriz_1];
+      int submatriz_dato=n->sudo[submatriz_1 ][submatriz_2];
 
-      if (submatriz_dato!=0) {
-        if (submatriz[submatriz_dato]==0) {
-
-          
-          submatriz[submatriz_dato]=1;
-
-          
-        } else {
-          return 0; 
-        }
+      if(submatriz[submatriz_dato]==0){
+        submatriz[submatriz_dato]=1;
+      }else{
+        return 0;
       }
+      
     }
   }
   
