@@ -45,50 +45,57 @@ void print_node(Node* n){
 
 int is_valid(Node* n){
   int fila[10]={0};
-  int  columna[10]={0};
+  int columna[10]={0};
+  
   int submatriz[10]={0};
-  for (int i=0;i<9;i++){
-    for(int j=0;j<9;j++){
-      
+
+  for (int i=0;i<9;i++) {
+    
+    for (int j=0;i<9;j++) {
       int dato=n->sudo[i][j];
-      if(dato!=0){
-        if(fila[dato]==0){
+
+      if (dato !=0) {
+
+        if (fila[dato]==0) {
+
+          
           fila[dato]=1;
-        }else{
+          
+        } else {
           return 0;
+        }
+      }
+
+      int dato_columna=n->sudo[j][i];
+
+      if (dato_columna !=0) {
+        
+        if (columna[dato_columna]==0) {
+          columna[dato_columna]=1;
+
+          
+        } else {
+          return 0; 
         }
         
       }
 
-    }
-  }
+      int submatriz_1=3*(i/3)+(j/3);
+      int submatriz_2=3*(i%3)+(j%3);
 
-  for (int i=0;i<9;i++){
-    for(int j=0;j<9;j++){
       
-      int dato_col=n->sudo[j][i];
-      if(dato_col!=0){
-        if(columna[dato_col]==0){
-          columna[dato_col]=1;
-        }else{
-          return 0;
+      int submatriz_dato = n->sudo[submatriz_2 ][submatriz_1];
+
+      if (submatriz_dato!=0) {
+        if (submatriz[submatriz_dato]==0) {
+
+          
+          submatriz[submatriz_dato]=1;
+
+          
+        } else {
+          return 0; 
         }
-        
-      }
-
-    }
-  }
-  int j=4;
-  for(int i=0;i<9;i++){
-    int CONT1=3*(i/3)+(j/3);
-    int CONT2=3*(i%3)+(j%3);
-
-    int sudoku=n->sudo[CONT2][CONT1];
-    if(sudoku!=0){
-      if(submatriz[sudoku]==0){
-        submatriz[sudoku]=1;
-      }else{
-        return 0;
       }
     }
   }
