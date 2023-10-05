@@ -78,20 +78,18 @@ int is_valid(Node* n){
 
     }
   }
+  int j=4;
+  for(int i=0;i<9;i++){
+    int CONT1=3*(i/3)+(j/3);
+    int CONT2=3*(i%3)+(j%3);
 
-  for (int i=0;i<9;i++){
-    for(int j=0;j<9;j++){
-      
-      int dato=n->sudo[i][j];
-      if(dato!=0){
-        if(fila[dato]==0){
-          fila[dato]=1;
-        }else{
-          return 0;
-        }
-        
+    int sudoku=n->sudo[CONT2][CONT1];
+    if(sudoku!=0){
+      if(submatriz[sudoku]==0){
+        submatriz[sudoku]=1;
+      }else{
+        return 0;
       }
-
     }
   }
   
