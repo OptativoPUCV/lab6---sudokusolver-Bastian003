@@ -66,10 +66,10 @@ int is_valid(Node* n){
   for (int i=0;i<9;i++){
     for(int j=0;j<9;j++){
       
-      int dato=n->sudo[j][i];
-      if(dato!=0){
-        if(columna[dato]==0){
-          columna[dato]=1;
+      int dato_col=n->sudo[j][i];
+      if(dato_col!=0){
+        if(columna[dato_col]==0){
+          columna[dato_col]=1;
         }else{
           return 0;
         }
