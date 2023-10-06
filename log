@@ -187,3 +187,20 @@ Fri 06 Oct 2023 11:53:22 PM UTC:
  tests:  2|4
 total_score: 15/70
 078e769
+Fri 06 Oct 2023 11:59:29 PM UTC: 
+ sudoku.c | 3 +++
+ 1 file changed, 3 insertions(+)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:49:7: error: unused variable ‘submatriz’ [-Werror=unused-variable]
+   49 |   int submatriz[9][10]={0};
+      |       ^~~~~~~~~
+sudoku.c:48:7: error: unused variable ‘revisarcolumna’ [-Werror=unused-variable]
+   48 |   int revisarcolumna[9][10]={0};
+      |       ^~~~~~~~~~~~~~
+sudoku.c:47:7: error: unused variable ‘revisarfila’ [-Werror=unused-variable]
+   47 |   int revisarfila[9][10]={0};
+      |       ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+1985e16
