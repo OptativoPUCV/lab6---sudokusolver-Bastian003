@@ -46,48 +46,7 @@ void print_node(Node* n){
 int is_valid(Node* n){
   
 
-  for (int i=0;i<9;i++) {
-    int fila[10]={0};
-    int columna[10]={0};
-  
-    int submatriz[10]={0};
-    
-    for (int j=0;j<9;j++) {
-      int dato=n->sudo[i][j];
-
-      if(fila[dato]==0){
-        fila[dato]=1;
-      }else{
-        fila[dato]=1;
-        return 0;
-      }
-
-      int dato_columna=n->sudo[j][i];
-
-      
-      if(columna[dato_columna]==0) {
-        columna[dato_columna]=1;
-      }else{
-        columna[dato_columna]=1;
-        return 0;
-      }
-      
-
-      int submatriz_1=3*(i/3)+(j/3);
-      int submatriz_2=3*(i%3)+(j%3);
-
-      
-      int submatriz_dato=n->sudo[submatriz_1 ][submatriz_2];
-
-      if(submatriz[submatriz_dato]==0){
-        submatriz[submatriz_dato]=1;
-      }else{
-        submatriz[submatriz_dato]=1;
-        return 0;
-      }
-      
-    }
-  }
+ 
   
   return 1;
 }
