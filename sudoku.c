@@ -57,8 +57,6 @@ int is_valid(Node* n){
 
       if(fila[dato]==0){
         fila[dato]=1;
-      }else{
-        return 0; 
       }
 
       int dato_columna=n->sudo[j][i];
@@ -66,10 +64,7 @@ int is_valid(Node* n){
       
       if(columna[dato_columna]==0) {
         columna[dato_columna]=1;
-      }else{
-        return 0; 
       }
-
       
 
       int submatriz_1=3*(i/3)+(j/3);
@@ -80,8 +75,6 @@ int is_valid(Node* n){
 
       if(submatriz[submatriz_dato]==0){
         submatriz[submatriz_dato]=1;
-      }else{
-        return 0;
       }
       
     }
