@@ -221,3 +221,9 @@ sudoku.c:109:13: error: ‘sudo’ undeclared (first use in this function)
 sudoku.c:109:13: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 18e3754
+Sat 07 Oct 2023 12:06:18 AM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|5
+total_score: 0/70
+b36168f
