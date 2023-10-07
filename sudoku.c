@@ -44,53 +44,65 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-int revisarfila[9][10]={0}; 
-int revisarcolumna[9][10]={0}; 
-int submatriz[9][10]={0}; 
-
-   
-for(int i=0; i< 9; i++) {
+  for(int i=0; i<9; i++){
+    int filas[10] = {0};
     
-    for(int j=0; j< 9; j++) {
-        int dato=n->sudo[i][j];
-
-           
-        if(revisarfila[i][dato]==1) {
-            
-          return 0; 
-        }
-        revisarfila[i][dato]=1;
-
-
-
-        if(revisarcolumna[j][dato]==1) {
-          return 0;
-        }
-        revisarcolumna[j][dato]=1;
-    }
-}
-
-
-for(int cont=0; cont< 9; cont++) {
-    for(int k=0; k< 9; k++) {
+    for(int j=0; j<9 ; j++){
+      int lugar = n->sudo[i][j];
+      
+      if (lugar != 0){
         
-        int i=3 *(cont/3)+(k/3);
-        int j=3*(cont%3)+(k%3);
-        
-        int dato=n->sudo[i][j];
-
+        if(filas[lugar] == 0){
+          filas[lugar]=1;
           
-        if(submatriz[cont][dato]==1) {
-            
+        }
+        else{
           return 0;
         }
-        
-        
-        submatriz[cont][dato] = 1;
+      }
     }
-}
+  }
 
- 
+  for (int i=0;i<9;i++){
+    int columnas[10] = {0};
+    
+    for(int j=0;j<9;j++){
+      int lugar_columna= n->sudo[j][i];
+      
+      if(lugar_columna != 0){
+        if (columnas[lugar_columna] == 0){
+          columnas[lugar_columna] = 1;
+        }
+        else{
+          return 0;
+        }
+      }
+    }
+  }
+
+  int i=4;
+
+  
+    int submatriz[10] = {0};
+    for (int cont=0; cont<9 ; cont++){
+      
+      int h=3*(i/3) + (cont/3);
+      int k=3*(i%3) + (cont%3);
+
+      int SUBMATRIZ = n->sudo[k][h];
+
+      
+      if(SUBMATRIZ != 0){
+        
+        if(submatriz[SUBMATRIZ]==0){
+          submatriz[SUBMATRIZ]= 1;
+        }
+        else{
+          return 0;
+        }
+      }
+    }
+
   
   return 1;
 }
