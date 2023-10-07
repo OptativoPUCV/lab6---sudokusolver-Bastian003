@@ -80,28 +80,7 @@ int is_valid(Node* n){
     }
   }
 
- /* int i=4;
 
-  
-    int submatriz[10] = {0};
-    for (int cont=0; cont<9 ; cont++){
-      
-      int h=3*(i/3) + (cont/3);
-      int k=3*(i%3) + (cont%3);
-
-      int SUBMATRIZ = n->sudo[k][h];
-
-      
-      if(SUBMATRIZ != 0){
-        
-        if(submatriz[SUBMATRIZ]==0){
-          submatriz[SUBMATRIZ]= 1;
-        }
-        else{
-          return 0;
-        }
-      }
-    }*/
   for (int i=0; i<9; i++) {
     int submatriz[10]={0};
     
