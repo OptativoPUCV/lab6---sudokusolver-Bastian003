@@ -80,7 +80,7 @@ int is_valid(Node* n){
     }
   }
 
-  int i=4;
+ /* int i=4;
 
   
     int submatriz[10] = {0};
@@ -101,7 +101,26 @@ int is_valid(Node* n){
           return 0;
         }
       }
+    }*/
+  for (int i=0; i<9; i++) {
+    int submatriz[10]={0};
+    
+    for (int j=0;j<9; j++) {
+      int fila=3*(i/3)+(j/3);
+      int columna=3*(i%3)+(j%3);
+      int lugar_submatriz=n->sudo[fila][columna];
+
+      if (lugar_submatriz!=0) {
+        if(submatriz[lugar_submatriz]==0){
+          
+          submatriz[lugar_submatriz]=1;
+        }
+        else {
+          return 0;
+        }
+      }
     }
+  }
 
   
   return 1;
