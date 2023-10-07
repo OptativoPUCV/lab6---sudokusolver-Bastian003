@@ -119,7 +119,8 @@ List* get_adj_nodes(Node* n){
           adyacente->sudo[i][j]=aux;
 
           if(is_valid(adyacente)){
-            pushBack(list, adyacente);
+            
+        
           }
           pushBack(list, adyacente);
         }
