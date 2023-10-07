@@ -204,3 +204,9 @@ sudoku.c:47:7: error: unused variable ‘revisarfila’ [-Werror=unused-variable
 cc1: all warnings being treated as errors
 Compilation failed
 1985e16
+Sat 07 Oct 2023 12:01:07 AM UTC: 
+ sudoku.c | 41 +++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 41 insertions(+)
+ tests:  2|4
+total_score: 15/70
+1162478
